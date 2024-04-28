@@ -1,0 +1,155 @@
+header .collapse .nav-item .active{
+ color: green !important;
+ /* Khi chỉnh sửa các thuộc tính , khi sử dụng !important thì giá trị đó mạnh nhất, n
+ nếu có từ 2 giá trị mang !important thì sẽ bắt đầu so sánh độ ưu tiên, giá trị càng lớn thì càng thắng */
+}
+header .nav-item a {
+    position: relative;
+}
+header .collapse .nav-item a::before {
+    content: "";
+    background-color: green;
+    position: absolute;
+    bottom: 0; left: 0;
+    width: 0;
+    height: 4px;
+    transition: all 0.5s;
+
+}
+header .collapse .nav-item .active::before {
+    width: 100%;
+}
+header .nav-item a:hover::before {
+    width: 100%;
+}
+
+/* CSS carousel  */
+
+.cyber_carousel .carousel_text {
+    /* Cách canh giữa phần tử mới */
+    position: absolute;
+    /* tạo lớp phủ thứ 3 */
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    background-color: rgba(39,43,54,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* top:50%;
+    /* transform: translateY(-50%); */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* transform: translate(-50%, -50%); */
+}
+.cyber_carousel .carousel-inner .carousel_text img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.cyber_carousel .carousel-inner .carousel_text h2{
+    font-size: 56px;
+}
+.cyber_carousel .carousel-indicators button {
+    height: 13px; width: 13px;
+    border-radius: 50%;
+}
+
+/* Tạo lớp phủ bằng cách thứ 2 */
+/* .cyber_carousel .carousel_item::before{*/
+    /* content: "";
+    position: absolute;
+    top:0; left: 0;
+    width: 100%;height: 100%;
+    display: block;
+    background-color: rgba (39,43,54,0.5);
+}  */
+/* css cho Project */
+.cyber_project .nav-pills .nav-link.active {
+    background-color: green;
+    border-color:  green !important;
+}
+.cyber_project .nav-link{
+    color: black;
+}
+/* xem đến Grid system  */
+ .cyber_project .project_item {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+}
+/* .cyber_project .project_item img{
+    width: 350px; height: 305.13px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.cyber_project .project_item .project_text {
+    text-align: center;
+    padding: 10 10 20;
+}
+.cyber_project .project_item h3{
+    font-size: 1.25rem;
+}  */
+/* Bo góc Utiliti Bootstrap */
+
+
+/* Reponsive  */
+/* Yêu cầu
+1. màn hình lớn hơn 1400px, tiêu đề carousel màu trắng
+2. màn hình dành cho mobile, tiêu đều sẽ là màu cam
+3. màn hình cho ipad từ 576 đến 992 sẽ có tiêu đề màu đỏ */
+/* Với giá trị max-width sẽ hỗ trợ lấy tất cả thiết bị màn hình có chiều dài từ 0 đến đúng chiều dài giá trị max-width */
+/* Giao diện mobile
+@media screen and (max-width: 1200px) {
+    header .navbar .navbar-brand span,
+    header .navbar .navbar-brand i{
+     color: rgba(152, 79, 220, 0.707)!important;
+    }
+ }
+@media screen and (max-width: 992px) {
+    .cyber_carousel .carousel_text h2{
+        color: red;
+        font-size: 40px;
+    }
+    header .navbar .navbar-brand span,
+    header .navbar .navbar-brand i{
+     color: rgba(178, 215, 45, 0.707)!important;
+    }
+}
+@media screen and (max-width: 576px) {
+    .cyber_carousel .carousel_text h2{
+        color: orange;
+        font-size: 30px;
+    }
+    .cyber_carousel .carousel_text img{
+        width: 250px; height: 250px;
+    }
+    header .navbar-toggler{
+        color: white;
+        border: 2px solid white;
+    }
+} */
+/* Luôn luôn viết và điều chỉnh reponsive giá trị max-width dành cho các màn hình lớn trước  */
+
+/* Yêu cầu bài tập 
+1 màn hình từ 992 đến 1200, chỉnh logo Tím
+2. màn hình từ 0 đến 992, logo vàng
+3. màn hình mobile sẽ tăng kích thước hình ảnh Banner lên 250px cho dài và cao*/
+
+
+/* Reponsive web với min-width (mobile first) */
+/* min-width là bắt đầu giá trị của min-width tới Dương vô cùng  */
+/* Yêu cầu tiêu đề bannet, khi màn hình từ 576px trở lên màu chữ là REd */
+
+@media  screen and (min-width: 576px) {
+    .cyber_carousel .carousel_text h2{
+        color: red ;
+    }
+}
+@media  screen and (min-width: 1200px) {
+    .cyber_carousel .carousel_text h2{
+        color: olivedrab ;
+    }
+}
+/* Ghi chú
+Max-width xét từ màn hình LỚN rồi về đến nhỏ
+Mix-width xét từ màn hình NHỎ tới lớn */
